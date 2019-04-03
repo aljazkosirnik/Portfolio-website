@@ -1,0 +1,25 @@
+#about-me {
+  height: 50vh;
+  background: $background-light;
+  position: relative;
+
+  .about-me-text {
+    @include absCenter;
+    width: 80%;
+    text-align: center;
+
+    h1 {
+      color: #fff;
+      font-size: 5.5rem;
+    }
+  }
+
+  .about-me-icons {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+  }
+}
