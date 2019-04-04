@@ -33,7 +33,7 @@
 
 $breakpoint arguement choices:
 - phone
-- tab-port
+- tablet
 - tab-land
 - big-desktop
 
@@ -248,21 +248,33 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 451px) {
   html {
-    font-size: 56.25%;
+    font-size: 40%;
   }
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   html {
-    font-size: 50%;
+    font-size: 40%;
   }
 }
 
-@media only screen and (min-width: 112.5em) {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
   html {
-    font-size: 75%;
+    font-size: 40%;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 62.5%;
   }
 }
 
@@ -291,10 +303,62 @@ body {
   text-align: center;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #about-me .about-me-text {
+    width: 90%;
+  }
+  #about-me .about-me-text svg {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  #about-me .about-me-text {
+    width: 90%;
+  }
+  #about-me .about-me-text svg {
+    width: 80%;
+  }
+}
+
 #about-me .about-me-text h1 {
   color: #fff;
   font-size: 5.5rem;
   font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #about-me .about-me-text h1 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  #about-me .about-me-text h1 {
+    font-size: 3.5rem;
+  }
+}
+
+#about-me .about-me-text h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 3rem;
+}
+
+#about-me .about-me-text h2 a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#about-me .about-me-text h2 a:hover {
+  opacity: 0.7;
+  border-bottom: #fff solid 1px;
+  padding-bottom: 0.5rem;
 }
 
 #about-me .about-me-icons {
@@ -309,6 +373,12 @@ body {
           align-items: center;
   width: 40%;
   margin: auto;
+}
+
+@media only screen and (max-width: 451px) {
+  #about-me .about-me-icons {
+    padding-top: 2rem;
+  }
 }
 
 #projects {
@@ -331,7 +401,44 @@ body {
           align-items: center;
 }
 
-#projects .row video {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #projects .row:nth-of-type(odd) {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  #projects .row:nth-of-type(odd) .row-right {
+    height: 10%;
+  }
+  #projects .row:nth-of-type(even) {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #projects .row:nth-of-type(even) .row-left {
+    height: 10%;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  #projects .row {
+    width: 100%;
+  }
+  #projects .row:nth-of-type(odd) {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  #projects .row:nth-of-type(odd) .row-right {
+    height: 0;
+  }
+  #projects .row:nth-of-type(even) {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #projects .row:nth-of-type(even) .row-left {
+    height: 0;
+  }
+}
+
+#projects .row-img video {
   width: 100%;
   -webkit-box-shadow: 0 0 4rem 1rem #737373;
           box-shadow: 0 0 4rem 1rem #737373;
@@ -356,7 +463,7 @@ body {
   text-transform: uppercase;
   color: #191919;
   font-family: "Montserrat", sans-serif;
-  padding-bottom: 1rem;
+  padding: 3rem 0 0;
 }
 
 #projects .row-left h4 {
@@ -365,6 +472,18 @@ body {
   line-height: 4rem;
   color: #191919;
   font-family: "Montserrat", sans-serif;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #projects .row-left {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  #projects .row-left {
+    width: 100%;
+  }
 }
 
 #projects .row-right {
@@ -386,7 +505,7 @@ body {
   text-transform: uppercase;
   color: #191919;
   font-family: "Montserrat", sans-serif;
-  padding-bottom: 1rem;
+  padding: 3rem 0 0;
 }
 
 #projects .row-right h4 {
@@ -397,15 +516,66 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #projects .row-right {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  #projects .row-right {
+    width: 100%;
+  }
+}
+
 #projects .row-icons {
-  padding: 1rem 0;
-  margin: 1rem auto;
+  padding: 1rem 0 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#projects .row-icons .icon-hover {
+  position: relative;
+  width: 20%;
+}
+
+#projects .row-icons .icon-hover:hover {
+  cursor: default;
+}
+
+#projects .row-icons .icon-hover:hover img {
+  opacity: 0.3;
+}
+
+#projects .row-icons .icon-hover:hover h2 {
+  opacity: 1;
 }
 
 #projects .row-icons img {
-  width: 10%;
-  height: 10%;
+  width: 60%;
+  height: 90%;
   margin: 0 1rem;
+}
+
+#projects .row-icons h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 39%;
+  opacity: 0;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  line-height: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #191919;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: #fff 1px 1px;
+  text-align: center;
 }
 
 #projects .row-buttons {
@@ -458,10 +628,34 @@ body {
 #footer {
   text-align: center;
   height: 30vh;
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(60%, #191919), to(#302f2f));
-  background: linear-gradient(to top right, #191919 60%, #302f2f);
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(40%, #191919), to(#302f2f));
+  background: linear-gradient(to top right, #191919 40%, #302f2f);
   color: #737373;
   padding: 3rem 0 3rem;
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px) {
+  #footer {
+    height: 25vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  #footer {
+    height: 20vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #footer {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  #footer {
+    height: 25vh;
+  }
 }
 
 #footer h2 {
@@ -551,6 +745,18 @@ header div h1 {
   font-weight: 400;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  header div h1 {
+    font-size: 9rem;
+  }
+}
+
+@media only screen and (max-width: 451px) {
+  header div h1 {
+    font-size: 5rem;
+  }
+}
+
 header svg {
   position: absolute;
   top: 50%;
@@ -559,6 +765,12 @@ header svg {
           transform: translate(-50%, -50%);
   top: 90%;
   height: 4%;
+}
+
+@media only screen and (max-width: 451px) {
+  header svg {
+    top: 95%;
+  }
 }
 
 header .white .words .char {
@@ -609,15 +821,51 @@ header .second-word .word .char {
   height: 40vh;
   background: -webkit-gradient(linear, left bottom, right top, color-stop(45%, #cfcfcf), to(#f3f3f3));
   background: linear-gradient(to top right, #cfcfcf 45%, #f3f3f3);
-  -webkit-clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 84% 0, 99% 100%, 0 100%);
+          clip-path: polygon(0 0, 84% 0, 99% 100%, 0 100%);
 }
 
 #skills .row .background-right {
   background: -webkit-gradient(linear, right bottom, left top, color-stop(50%, #cfcfcf), to(#f3f3f3));
   background: linear-gradient(to top left, #cfcfcf 50%, #f3f3f3);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+  -webkit-clip-path: polygon(3% 0, 100% 0, 100% 100%, 18% 100%);
+          clip-path: polygon(3% 0, 100% 0, 100% 100%, 18% 100%);
+}
+
+#skills .row .icon-hover {
+  position: relative;
+  width: 100%;
+}
+
+#skills .row .icon-hover h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 40%;
+  opacity: 0;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #191919;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: #fff 1px 1px;
+  text-align: center;
+}
+
+#skills .row .icon-hover:hover {
+  cursor: default;
+}
+
+#skills .row .icon-hover:hover img {
+  opacity: 0.3;
+}
+
+#skills .row .icon-hover:hover h2 {
+  opacity: 1;
 }
 
 #skills .row .what-i-know {
@@ -638,6 +886,17 @@ header .second-word .word .char {
   margin-bottom: 3rem;
 }
 
+@media only screen and (max-width: 451px) {
+  #skills .row .what-i-know h3 {
+    position: absolute;
+    top: 6%;
+    left: 16%;
+    z-index: 2;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
 #skills .row .what-i-know .grid {
   padding-top: 5rem;
   position: absolute;
@@ -650,21 +909,27 @@ header .second-word .word .char {
   top: 75%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 25% 25% 25%;
-      grid-template-columns: 25% 25% 25% 25%;
   -ms-grid-rows: 8rem 8rem 8rem;
       grid-template-rows: 8rem 8rem 8rem;
   grid-row-gap: 15px;
-  left: 44%;
+  left: 53%;
   -ms-grid-rows: 8rem 8rem;
       grid-template-rows: 8rem 8rem;
+  -ms-grid-columns: 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20%;
+}
+
+@media only screen and (max-width: 451px) {
+  #skills .row .what-i-know .grid {
+    padding-top: 2rem;
+  }
 }
 
 #skills .row .what-tools-i-use {
   width: 55%;
   position: absolute;
   top: 0;
-  left: 47%;
+  left: 45%;
 }
 
 #skills .row .what-tools-i-use h3 {
@@ -678,6 +943,17 @@ header .second-word .word .char {
   margin-bottom: 3rem;
 }
 
+@media only screen and (max-width: 451px) {
+  #skills .row .what-tools-i-use h3 {
+    position: absolute;
+    top: 6%;
+    left: 16%;
+    z-index: 2;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
 #skills .row .what-tools-i-use .grid {
   position: absolute;
   top: 50%;
@@ -689,13 +965,18 @@ header .second-word .word .char {
   top: 75%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 25% 25% 25%;
-      grid-template-columns: 25% 25% 25% 25%;
   -ms-grid-rows: 8rem 8rem 8rem;
       grid-template-rows: 8rem 8rem 8rem;
   grid-row-gap: 15px;
-  left: 57%;
+  width: 76%;
+  left: 62%;
   -ms-grid-columns: 23% 23% 23% 23%;
       grid-template-columns: 23% 23% 23% 23%;
+}
+
+@media only screen and (max-width: 451px) {
+  #skills .row .what-tools-i-use .grid {
+    grid-row-gap: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

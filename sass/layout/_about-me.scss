@@ -8,10 +8,55 @@
     width: 80%;
     text-align: center;
 
+    @include respond(tablet) {
+      width: 90%;
+
+      svg {
+        width: 80%;
+      }
+    }
+
+    @include respond(phone) {
+      width: 90%;
+
+      svg {
+        width: 80%;
+      }
+    }
+
     h1 {
       color: #fff;
       font-size: 5.5rem;
       font-weight: 400;
+
+      @include respond(tablet) {
+        font-size: 5rem;
+      }
+
+      @include respond(phone) {
+        font-size: 3.5rem;
+      }
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      margin-top: 3rem;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+          opacity: 0.7;
+          border-bottom: #fff solid 1px;
+          padding-bottom: 0.5rem;
+        }
+      }
     }
   }
 
@@ -22,5 +67,9 @@
     align-items: center;
     width: 40%;
     margin: auto;
+
+    @include respond(phone) {
+      padding-top: 2rem;
+    }
   }
 }

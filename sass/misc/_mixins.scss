@@ -25,7 +25,7 @@
     text-transform: uppercase;
     color: $color-dark;
     font-family: "Montserrat", sans-serif;
-    padding-bottom: 1rem;
+    padding: 3rem 0 0;
   }
 
   // Overview
@@ -35,6 +35,14 @@
     line-height: 4rem;
     color: $color-dark;
     font-family: "Montserrat", sans-serif;
+  }
+
+  @include respond(tablet) {
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
   }
 }
 
@@ -46,7 +54,6 @@
   top: 75%;
 
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 8rem 8rem 8rem;
   grid-row-gap: 15px;
 }
@@ -61,6 +68,15 @@
     color: $color-dark;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 3rem;
+
+    @include respond(phone) {
+      position: absolute;
+      top: 6%;
+      left: 16%;
+      z-index: 2;
+      font-size: 2rem;
+      letter-spacing: 0.4rem;
+    }
   }
 }
 
@@ -74,30 +90,35 @@
 
 $breakpoint arguement choices:
 - phone
-- tab-port
+- tablet
 - tab-land
 - big-desktop
 
 */
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 451px) {
       @content;
-    } //600px
+    }
   }
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) {
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
       @content;
-    } //900px
+    }
   }
-  @if $breakpoint == tab-land {
-    @media only screen and (max-width: 75em) {
+  @if $breakpoint == laptop {
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
       @content;
-    } //1200px
+    }
+  }
+  @if $breakpoint == laptop-l {
+    @media only screen and (min-width: 1440px) and (max-width: 1599px) {
+      @content;
+    }
   }
   @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) {
+    @media only screen and (min-width: 1600px) {
       @content;
-    } //1800
+    }
   }
 }

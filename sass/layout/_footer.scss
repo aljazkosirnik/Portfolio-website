@@ -3,11 +3,27 @@
   height: 30vh;
   background: linear-gradient(
     to top right,
-    $background-header 60%,
+    $background-header 40%,
     $background-dark
   );
   color: $color-grey;
   padding: 3rem 0 3rem;
+
+  @include respond(laptop-l) {
+    height: 25vh;
+  }
+
+  @include respond(laptop) {
+    height: 20vh;
+  }
+
+  @include respond(tablet) {
+    height: 20vh;
+  }
+
+  @include respond(phone) {
+    height: 25vh;
+  }
 
   h2 {
     text-align: center;

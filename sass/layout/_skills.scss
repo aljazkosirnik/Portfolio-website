@@ -24,7 +24,7 @@
         $skills-light
       );
       // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-      clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 84% 0, 99% 100%, 0 100%);
 
       &-right {
         background: linear-gradient(
@@ -33,7 +33,39 @@
           $skills-light
         );
         // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+        clip-path: polygon(3% 0, 100% 0, 100% 100%, 18% 100%);
+      }
+    }
+
+    .icon-hover {
+      position: relative;
+      width: 100%;
+
+      h2 {
+        @include absCenter();
+        top: 40%;
+        opacity: 0;
+        font-weight: 400;
+        letter-spacing: 0.3rem;
+        line-height: 2rem;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: $color-dark;
+        font-family: "Montserrat", sans-serif;
+        text-shadow: #fff 1px 1px;
+        text-align: center;
+      }
+
+      &:hover {
+        cursor: default;
+
+        img {
+          opacity: 0.3;
+        }
+
+        h2 {
+          opacity: 1;
+        }
       }
     }
 
@@ -47,8 +79,13 @@
       .grid {
         padding-top: 5rem;
         @include skills-column;
-        left: 44%;
+        left: 53%;
         grid-template-rows: 8rem 8rem;
+        grid-template-columns: 20% 20% 20% 20%;
+
+        @include respond(phone) {
+          padding-top: 2rem;
+        }
       }
     }
 
@@ -57,12 +94,17 @@
       width: 55%;
       position: absolute;
       top: 0;
-      left: 47%;
+      left: 45%;
 
       .grid {
         @include skills-column;
-        left: 57%;
+        width: 76%;
+        left: 62%;
         grid-template-columns: 23% 23% 23% 23%;
+
+        @include respond(phone) {
+          grid-row-gap: 0;
+        }
       }
     }
   }
