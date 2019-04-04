@@ -1,5 +1,6 @@
 ScrollOut();
 
+// Animate arrow
 anime({
   targets: [".arrow path"],
   d:
@@ -11,6 +12,7 @@ anime({
   easing: "easeInOutExpo"
 });
 
+// Animate icons
 function MouseOver(elem) {
   if (elem.children[0].className.baseVal === "linkedin-icon") {
     anime({
@@ -21,7 +23,8 @@ function MouseOver(elem) {
       scale: 1,
       direction: "alternate",
       easing: "easeInOutExpo",
-      translateY: -11
+      translateY: -11,
+      loop: 1
     });
   }
   if (elem.children[0].className.baseVal === "github-icon") {
@@ -34,7 +37,23 @@ function MouseOver(elem) {
       direction: "alternate",
       easing: "easeInOutExpo",
       translateX: 2,
-      translateY: 1
+      translateY: 7,
+      loop: 1
     });
   }
+  if (elem.children[0].className.baseVal === "email-icon") {
+    anime({
+      targets: [`.${elem.children[0].className.baseVal} path`],
+      baseFrequency: 0,
+      scale: 1,
+      direction: "alternate",
+      easing: "easeInOutExpo",
+      translateY: 2,
+      loop: 1
+    });
+  }
+}
+
+function MouseOut(elem) {
+  // Not needed now
 }

@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Personal website of Aljaž Kosirnik" />
     <link rel="icon" type="image/png" href="/img/Favicon.jpg" />
+    <!-- Scroll Out -->
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <!-- Splitting -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/splitting/dist/splitting.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/splitting/dist/splitting-cells.css"
-    />
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-134767575-1"
@@ -30,8 +29,13 @@
 
       gtag("config", "UA-134767575-1");
     </script>
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=EB+Garamond:400,500"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400"
       rel="stylesheet"
     />
     <title>Aljaž Kosirnik | Web Developer</title>
@@ -75,13 +79,13 @@
       <div class="about-me-text">
         <h1>I`m a Self-Taught Developer based in Slovenia.</h1>
         <h1>I love learing & experimenting with new technologies.</h1>
-        +
         <div class="about-me-icons">
           <a
             href="https://www.linkedin.com/in/aljaz-kosirnik/"
             target="_blank"
             id="linkedin"
             onmouseover="MouseOver(this)"
+            onmouseout="MouseOut(this)"
           >
             <svg
               width="60"
@@ -102,6 +106,7 @@
             target="_blank"
             id="github"
             onmouseover="MouseOver(this)"
+            onmouseout="MouseOut(this)"
           >
             <svg
               width="60"
@@ -121,6 +126,7 @@
             href="mailto:hello@aljazkosirnik.si"
             id="email"
             onmouseover="MouseOver(this)"
+            onmouseout="MouseOut(this)"
           >
             <svg
               width="60"
@@ -143,8 +149,360 @@
         </div>
       </div>
     </section>
-    <section id="projects"></section>
-    <footer id="footer"></footer>
+    <section id="projects">
+      <div class="row">
+        <div data-scroll="in" class="row-left">
+          <h2 data-splitting class="row-heading">
+            Filmi
+          </h2>
+          <h4 class="row-lead">
+            "Filmi" site delivers the latest and greatest movies, TV shows and
+            actors. Discover whats trending in theaters and what the public is
+            viewing right now.
+          </h4>
+          <div class="row-icons">
+            <h3>Created with</h3>
+            <img
+              src="/img/svg/python.svg"
+              srcset="/img/svg/python.svg"
+              alt="Python Icon"
+            />
+            <img
+              src="/img/svg/flask.svg"
+              srcset="/img/svg/flask.svg"
+              alt="Flask Icon"
+              class="icons"
+            />
+            <img
+              src="/img/svg/sass.svg"
+              srcset="/img/svg/sass.svg"
+              alt="Sass Icon"
+              class="icons"
+            />
+          </div>
+          <div class="row-buttons">
+            <a
+              href="https://filmi-app.herokuapp.com"
+              target="_blank"
+              class="btn btn-light"
+              >Live Site</a
+            >
+            <a
+              href="https://github.com/aljazkosirnik/Filmi/"
+              target="_blank"
+              class="btn btn-dark"
+              >Github repository</a
+            >
+          </div>
+        </div>
+        <div class="row-right">
+          <div class="row-img">
+            <video
+              muted
+              loop
+              autoplay
+              src="/img/filmi.webm"
+              alt="Filmi app"
+            ></video>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-left">
+          <div class="row-img">
+            <video
+              muted
+              loop
+              autoplay
+              src="/img/vehicle-manegment.webm"
+              alt="Filmi app"
+            ></video>
+          </div>
+        </div>
+        <div data-scroll="in" class="row-right">
+          <h2 data-splitting class="row-heading">
+            Vehicle management
+          </h2>
+          <h4 class="row-lead">
+            Manage all your company vehicles and add new ones. App runs on
+            Firestore, with support for authentication & has full CRUD
+            functionality.
+          </h4>
+          <div class="row-icons">
+            <h3>Created with</h3>
+            <img
+              src="/img/svg/react.svg"
+              srcset="/img/svg/react.svg"
+              alt="React Icon"
+              class="icons"
+            />
+            <img
+              src="/img/svg/firebase.svg"
+              srcset="/img/svg/firebase.svg"
+              alt="Firebase Icon"
+              class="icons"
+            />
+          </div>
+          <div class="row-buttons">
+            <a
+              href="https://pregled-vozil.firebaseapp.com/"
+              target="_blank"
+              class="btn btn-light"
+              >Live Site</a
+            >
+            <a
+              href="https://github.com/aljazkosirnik/Pregled-Vozil-ReactJS"
+              target="_blank"
+              class="btn btn-dark"
+              >Github repository</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-left" data-scroll="in">
+          <h2 data-splitting class="row-heading">
+            Github Finder
+          </h2>
+          <h4 class="row-lead">
+            Search GitHub users by their username, Github finder uses the Github
+            API and will display users repos, gists, followers, their website &
+            location. Give it a try!
+          </h4>
+          <div class="row-icons">
+            <h3>Created with</h3>
+            <img
+              src="/img/svg/js.svg"
+              srcset="/img/svg/js.svg"
+              alt="Javascript Icon"
+              class="icons"
+            />
+            <img
+              src="/img/svg/bootstrap.svg"
+              srcset="/img/svg/bootstrap.svg"
+              alt="Bootstrap Icon"
+              class="icons"
+            />
+            <img
+              src="/img/svg/github.svg"
+              srcset="/img/svg/github.svg"
+              alt="Github Icon"
+              class="icons"
+            />
+          </div>
+          <div class="row-buttons">
+            <a
+              href="https://aljazkosirnik.si/githubfinder/"
+              target="_blank"
+              class="btn btn-light"
+              >Live Site</a
+            >
+            <a
+              href="https://github.com/aljazkosirnik/GitHubProfileFinder"
+              target="_blank"
+              class="btn btn-dark"
+              >Github repository</a
+            >
+          </div>
+        </div>
+        <div class="row-right">
+          <div class="row-img">
+            <video
+              muted
+              loop
+              autoplay
+              src="/img/github-finder.webm"
+              alt="Filmi app"
+            ></video>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-left">
+          <div class="row-img">
+            <video
+              muted
+              loop
+              autoplay
+              src="/img/simon.webm"
+              alt="Filmi app"
+            ></video>
+          </div>
+        </div>
+        <div data-scroll="in" class="row-right">
+          <h2 data-splitting class="row-heading">
+            Simon
+          </h2>
+          <h4 class="row-lead">
+            Simon was an electronic memory game released by Milton Bradley in
+            1978 that became an instant hit worldwide.
+          </h4>
+          <div class="row-icons">
+            <h3>Created with</h3>
+            <img
+              src="/img/svg/jquery.svg"
+              srcset="/img/svg/jquery.svg"
+              alt="Jquery Icon"
+              class="icons"
+            />
+          </div>
+          <div class="row-buttons">
+            <a
+              href="https://aljazkosirnik.si/simon/"
+              target="_blank"
+              class="btn btn-light"
+              >Live Site</a
+            >
+            <a
+              href="https://github.com/aljazkosirnik/Simon-igra/"
+              target="_blank"
+              class="btn btn-dark"
+              >Github repository</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="row">
+        <div class="what-i-know">
+          <h3>What i know</h3>
+          <div class="background">
+            <div class="grid">
+              <img
+                src="/img/svg/html.svg"
+                srcset="/img/svg/html.svg"
+                alt="Html Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/css.svg"
+                srcset="/img/svg/css.svg"
+                alt="Css Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/sass.svg"
+                srcset="/img/svg/sass.svg"
+                alt="Sass Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/js.svg"
+                srcset="/img/svg/js.svg"
+                alt="Javascript Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/jquery.svg"
+                srcset="/img/svg/jquery.svg"
+                alt="Jquery Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/react.svg"
+                srcset="/img/svg/react.svg"
+                alt="React Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/python.svg"
+                srcset="/img/svg/python.svg"
+                alt="Python Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/flask.svg"
+                srcset="/img/svg/flask.svg"
+                alt="Flask Icon"
+                class="icons"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="what-tools-i-use">
+          <h3>What tools i use</h3>
+          <div class="background background-right">
+            <div class="grid">
+              <img
+                src="/img/svg/vsc.svg"
+                srcset="/img/svg/vsc.svg"
+                alt="Visual Studio Code Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/git.svg"
+                srcset="/img/svg/git.svg"
+                alt="Git Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/github.svg"
+                srcset="/img/svg/github.svg"
+                alt="Github Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/brave.svg"
+                srcset="/img/svg/brave.svg"
+                alt="Brave Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/firebase.svg"
+                srcset="/img/svg/firebase.svg"
+                alt="Firebase Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/gae.svg"
+                srcset="/img/svg/gae.svg"
+                alt="Google Cloud Platform Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/bootstrap.svg"
+                srcset="/img/svg/bootstrap.svg"
+                alt="Bootstrap Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/figma.svg"
+                srcset="/img/svg/figma.svg"
+                alt="Figma Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/ai.svg"
+                srcset="/img/svg/ai.svg"
+                alt="Adobe Illustrator Icon"
+                class="icons"
+              />
+              <img
+                src="/img/svg/heroku.svg"
+                srcset="/img/svg/heroku.svg"
+                alt="Heroku Icon"
+                class="icons"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div data-scroll="in">
+        <h2 data-splitting class="row-heading">Looking for a developer?</h2>
+        <h4>
+          I’m always open to discussing product design work or partnership
+          opportunities.
+        </h4>
+        <a
+          href="mailto:hello@aljazkosirnik.si"
+          class="btn btn-light btn-light-contact"
+          >hello[at]aljazkosirnik.si</a
+        >
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script src="js/index.js"></script>
     <script>

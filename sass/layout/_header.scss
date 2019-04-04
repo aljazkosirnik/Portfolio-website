@@ -24,28 +24,28 @@ header {
     top: 90%;
     height: 4%;
   }
-}
 
-.white .words .char {
-  color: transparent;
-}
+  .white .words .char {
+    color: transparent;
+  }
 
-.words {
-  .word {
-    .char {
-      animation: slide-right 2s forwards;
-      animation-delay: calc(0.2s + (0.04s * var(--char-index)));
-      opacity: 0;
+  .words {
+    .word {
+      .char {
+        animation: slide-right 2s forwards;
+        animation-delay: calc(1s + (0.04s * var(--char-index)));
+        opacity: 0;
+      }
     }
   }
-}
 
-.second-word {
-  .word {
-    .char {
-      animation: slide-right 2s forwards;
-      animation-delay: calc(1s + (0.04s * var(--char-index)));
-      opacity: 0;
+  .second-word {
+    .word {
+      .char {
+        animation: slide-right 2s forwards;
+        animation-delay: calc(2s + (0.04s * var(--char-index)));
+        opacity: 0;
+      }
     }
   }
 }

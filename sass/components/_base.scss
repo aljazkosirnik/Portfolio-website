@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-weight: 400;
 }
 
 html {
@@ -29,4 +28,7 @@ html {
 body {
   box-sizing: border-box;
   font-family: "EB Garamond", serif;
+  font-weight: 400;
+  height: 100vh;
+  overflow-x: hidden;
 }

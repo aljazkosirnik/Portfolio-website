@@ -1,0 +1,69 @@
+#skills {
+  width: 100%;
+  height: 60%;
+  position: relative;
+
+  .row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    height: 100%;
+
+    img {
+      width: 70%;
+      height: 70%;
+      margin: auto;
+    }
+
+    .background {
+      height: 40vh;
+      background: linear-gradient(
+        to top right,
+        $skills-dark 45%,
+        $skills-light
+      );
+      // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+
+      &-right {
+        background: linear-gradient(
+          to top left,
+          $skills-dark 50%,
+          $skills-light
+        );
+        // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+      }
+    }
+
+    .what-i-know {
+      @include skills-h3;
+      width: 55%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .grid {
+        padding-top: 5rem;
+        @include skills-column;
+        left: 44%;
+        grid-template-rows: 8rem 8rem;
+      }
+    }
+
+    .what-tools-i-use {
+      @include skills-h3;
+      width: 55%;
+      position: absolute;
+      top: 0;
+      left: 47%;
+
+      .grid {
+        @include skills-column;
+        left: 57%;
+        grid-template-columns: 23% 23% 23% 23%;
+      }
+    }
+  }
+}

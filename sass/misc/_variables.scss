@@ -2,13 +2,114 @@ $background-header: #191919;
 $background-dark: #302f2f;
 $background-light: #737373;
 
+// Skills
+$skills-light: rgb(243, 243, 243);
+$skills-dark: rgb(207, 207, 207);
+// $skills-dark: rgb(0, 0, 0);
+
+// Text
 $color-grey: #737373;
+$color-dark: #191919;
 
 .white {
   color: #fff;
 }
 
-.icons img {
-  width: 5%;
-  padding: 1rem;
+// Icons & Hover text
+
+// .icons {
+//   transition: opacity 0.6s ease-in-out;
+//   position: relative;
+//   height: 100%;
+//   width: 100%;
+
+//   p {
+//     font-size: 2rem;
+//     @include absCenter;
+//     opacity: 1;
+//   }
+
+//   img {
+//     opacity: 0.2;
+//     @include absCenter;
+//   }
+
+//   &:hover {
+//     p {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+/* ---- Projects button ---- */
+.btn {
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: transparent;
+  border: solid 0.1rem $color-grey;
+  box-shadow: 0 1rem 8rem 0.7rem $color-grey;
+  color: #000;
+  border-radius: 0.6em;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 1rem;
+  padding: 1.2rem 2.8rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+
+  &:hover {
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.btn-light {
+  background: {
+    image: linear-gradient(45deg, $background-light 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background 500ms ease-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.btn-dark {
+  background: {
+    image: linear-gradient(45deg, #000 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background 500ms ease-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+.btn-light-contact {
+  background-color: #fff;
+  box-shadow: 0 0 2rem 0.7rem $color-grey;
+  background: {
+    image: linear-gradient(90deg, $background-light 50%, transparent 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background 500ms ease-out;
+
+  &:hover {
+    background-position: 0;
+  }
+}
+
+/* ---- Scrolling ---- */
+[data-scroll="in"] {
+  opacity: 1;
+}
+[data-scroll="out"] {
+  opacity: 0;
 }

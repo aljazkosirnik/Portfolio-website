@@ -1,0 +1,68 @@
+#footer {
+  text-align: center;
+  height: 30vh;
+  background: linear-gradient(
+    to top right,
+    $background-header 60%,
+    $background-dark
+  );
+  color: $color-grey;
+  padding: 3rem 0 3rem;
+
+  h2 {
+    text-align: center;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.7rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 0.7rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 4rem;
+  }
+
+  // Scroll
+  h2.row-heading .char {
+    color: transparent;
+    overflow: hidden;
+  }
+
+  h2.row-heading .char::after {
+    visibility: visible;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30%);
+    transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-delay: calc(0.4s + (0.04s * var(--char-index)));
+  }
+
+  [data-scroll="in"] h2.splitting .char::after {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h2.row-heading span.word {
+    color: transparent;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30%);
+  }
+
+  [data-scroll="in"] h2.row-heading span.word {
+    visibility: visible;
+    color: #fff;
+    transform: translateY(0);
+    transition: all 1000ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-delay: calc(0.4s + (0.04s * var(--word-index)));
+    opacity: 1;
+  }
+}
